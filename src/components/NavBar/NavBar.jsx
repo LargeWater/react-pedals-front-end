@@ -3,23 +3,22 @@ import { Link } from 'react-router-dom'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
-      {user ?
-        <nav>
-          <ul>
-            <li>Welcome, {user.name}</li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-            <li><Link to="/changePassword">Change Password</Link></li>
-          </ul>
-        </nav>
-      :
-        <nav>
-          <ul>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-          </ul>
-        </nav>
-      }
+      <header className="App-header">
+        React Gear
+        {user ?
+          <nav>
+            <Link to="/">Gear</Link>
+            <Link to="/add">Add Gear</Link>
+            <Link to="" onClick={handleLogout}>Log Out</Link>
+            <Link to="/changePassword">Change Password</Link>
+          </nav>
+        :
+          <nav>
+            <Link to="/login">Log In</Link>
+            <Link to="/signup">Sign Up</Link>
+          </nav>
+        }
+      </header>
     </>
   )
 }
