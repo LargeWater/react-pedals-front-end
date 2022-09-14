@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react"
 
-function AddGear(props) {
+function AddPedal(props) {
   const [formData, setFormData] = useState({
     name: "",
+		type: "",
     description: "",
-    price: "",
   })
 
   const handleChange = evt => {
@@ -20,16 +20,16 @@ function AddGear(props) {
 
   const handleSubmit = evt => {
 		evt.preventDefault()
-    props.handleAddGear(formData)
+    props.handleAddPedal(formData)
 	}
 
 	return (
 		<>
-			<h1>Add Gear</h1>
+			<h1>Add Pedal</h1>
 			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
 				<div className="form-group mb-3">
 					<label htmlFor="name-input" className="form-label">
-						Gear's Name (required)
+						Pedal's Name (required)
 					</label>
 					<input 
 						type="text"
@@ -43,7 +43,7 @@ function AddGear(props) {
 				</div>
 				<div className="form-group mb-3">
 					<label htmlFor="type-input" className="form-label">
-						Gear Type (required)
+						Pedal Type (required)
 					</label>
 					<input 
 						type="text"
@@ -57,7 +57,7 @@ function AddGear(props) {
 				</div>
 				<div className="form-group mb-4">
 					<label htmlFor="description-input" className="form-label">
-						Gear Description
+						Pedal Description
 					</label>
 					<input 
 						type="text"
@@ -74,7 +74,7 @@ function AddGear(props) {
 						className="btn btn-primary btn-fluid"
             disabled={!validForm}
 					>
-						Add Gear
+						Add Pedal
 					</button>
 				</div>
 			</form>
@@ -82,4 +82,4 @@ function AddGear(props) {
 	)
 }
 
-export default AddGear
+export default AddPedal

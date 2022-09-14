@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -7,18 +7,18 @@ import Login from './pages/Login/Login'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
-import AddGear from './pages/AddGear/AddGear'
-import * as gearService from './services/gearService'
+import AddPedal from './pages/AddPedal/AddPedal'
+import * as pedalService from './services/pedalService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
 
-  const [gear, setGear] = useState([])
+  const [pedals, setPedals] = useState([])
 
-  const handleAddGear = async newGearData => {
-    const newGear = await gearService.create(newGearData)
-    setGear([...gear, newGear])
+  const handleAddPedal = async newPedalData => {
+    const newPedal = await pedalService.create(newPedalData)
+    setPedals([...pedals, newPedal])
   }
 
   const handleLogout = () => {
@@ -30,6 +30,15 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(() => {
+    const fetchAllPedals = async () => {
+      const pedalData = await pedalService.getAll()
+      setPedals(pedalData)
+    }
+    fetchAllPedals()
+  }, [])
+
 
   return (
     <>
@@ -55,7 +64,7 @@ const App = () => {
             />
             <Route 
               path="/add"
-              element={<AddGear handleAddGear={handleAddGear}/>}
+              element={<AddPedal handleAddPedal={handleAddPedal}/>}
             />
           </Routes>
         </main>
