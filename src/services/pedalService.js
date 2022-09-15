@@ -1,5 +1,5 @@
 import * as tokenService from './tokenService'
-const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/pedal`
+const BASE_URL = `${process.env.REACT_APP_BACK_END_SERVER_URL}/api/pedals`
 
 async function create(pedal) {
   const res = await fetch(BASE_URL, {

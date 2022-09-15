@@ -1,19 +1,16 @@
 import { useState, useRef, useEffect } from "react"
 
 function AddPedal(props) {
+	const formElement = useRef()
+	const [validForm, setValidForm] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
 		type: "",
     description: "",
   })
-
   const handleChange = evt => {
 		setFormData({ ...formData, [evt.target.name]: evt.target.value })
 	}
-
-  const [validForm, setValidForm] = useState(false)
-  const formElement = useRef()
-
   useEffect(() => {
 		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
 	}, [formData])

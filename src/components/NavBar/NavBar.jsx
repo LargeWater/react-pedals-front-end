@@ -4,11 +4,11 @@ const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       <header className="App-header">
-        React Gear
+        React Pedals
         {user ?
           <nav>
-            <Link to="/">Gear</Link>
-            <Link to="/add">Add Gear</Link>
+            <Link to="/">Pedals</Link>
+            <Link to="/add">Add Pedal</Link>
             <Link to="" onClick={handleLogout}>Log Out</Link>
             <Link to="/changePassword">Change Password</Link>
           </nav>

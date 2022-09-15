@@ -9,6 +9,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import AddPedal from './pages/AddPedal/AddPedal'
 import * as pedalService from './services/pedalService'
+import PedalList from './pages/PedalList/PedalList'
+import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -65,6 +67,10 @@ const App = () => {
             <Route 
               path="/add"
               element={<AddPedal handleAddPedal={handleAddPedal}/>}
+            />
+            <Route
+              path="/"
+              element={<PedalList pedals={pedals} />}
             />
           </Routes>
         </main>
