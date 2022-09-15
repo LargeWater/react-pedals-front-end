@@ -21,6 +21,7 @@ const App = () => {
   const handleAddPedal = async newPedalData => {
     const newPedal = await pedalService.create(newPedalData)
     setPedals([...pedals, newPedal])
+    navigate('/')
   }
 
   const handleLogout = () => {
@@ -31,6 +32,11 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleDeletePedal = async id => {
+    const deletedPedal = await pedalService.deleteOne(id)
+    setPedals(pedals.filter(pedal => pedal._id !== deletedPedal._id))
   }
 
   useEffect(() => {
@@ -70,7 +76,13 @@ const App = () => {
             />
             <Route
               path="/"
-              element={<PedalList pedals={pedals} />}
+              element={
+                <PedalList 
+                  pedals={pedals} 
+                  handleDeletePedal={handleDeletePedal}
+                  user={user}
+                />
+              }
             />
           </Routes>
         </main>

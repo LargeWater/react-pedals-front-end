@@ -13,6 +13,16 @@ async function create(pedal) {
 	return res.json()
 }
 
+async function deleteOne(id) {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return res.json()
+}
+
 async function getAll() {
   const res = await fetch(BASE_URL)
   return res.json()
@@ -20,5 +30,6 @@ async function getAll() {
 
 export {
 	create,
-  getAll
+  getAll,
+  deleteOne
 }
