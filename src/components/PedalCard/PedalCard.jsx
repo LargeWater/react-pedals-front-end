@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function PedalCard({pedal, handleDeletePedal, user}) {
   return(
     <div className="card">
@@ -7,6 +9,13 @@ function PedalCard({pedal, handleDeletePedal, user}) {
       </div>
       {user?.profile === pedal.owner._id &&
         <div className="card-footer">
+          <Link
+            className='btn btn-sm btn-warning'
+            to='/edit'
+            state={{pedal}}
+          >
+            Edit
+          </Link>
           <button 
             className="btn btn-sm btn-danger m-left"
             onClick={() => handleDeletePedal(pedal._id)}

@@ -28,8 +28,22 @@ async function getAll() {
   return res.json()
 }
 
+async function update(pedal) {
+  const res = await fetch(`${BASE_URL}/${pedal._id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    },
+    body: JSON.stringify(pedal)
+  })
+  return res.json()
+}
+
+
 export {
 	create,
   getAll,
-  deleteOne
+  deleteOne,
+  update
 }

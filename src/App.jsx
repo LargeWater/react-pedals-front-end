@@ -10,6 +10,7 @@ import * as authService from './services/authService'
 import AddPedal from './pages/AddPedal/AddPedal'
 import * as pedalService from './services/pedalService'
 import PedalList from './pages/PedalList/PedalList'
+import EditPedal from './pages/EditPedal/EditPedal'
 import './App.css'
 
 const App = () => {
@@ -37,6 +38,15 @@ const App = () => {
   const handleDeletePedal = async id => {
     const deletedPedal = await pedalService.deleteOne(id)
     setPedals(pedals.filter(pedal => pedal._id !== deletedPedal._id))
+  }
+
+  const handleUpdatePedal = async updatedPedalData => {
+    const updatedPedal = await pedalService.update(updatedPedalData)
+    const newPedalsArray = pedals.map(pedal => 
+      pedal._id === updatedPedal._id ? updatedPedal : pedal 
+    )
+    setPedals(newPedalsArray)
+    navigate('/')
   }
 
   useEffect(() => {
@@ -83,6 +93,10 @@ const App = () => {
                   user={user}
                 />
               }
+            />
+            <Route
+              path="/edit"
+              element={<EditPedal handleUpdatePedal={handleUpdatePedal}/>}
             />
           </Routes>
         </main>
