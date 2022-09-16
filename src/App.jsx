@@ -19,7 +19,7 @@ const App = () => {
 
   const [pedals, setPedals] = useState([])
 
-  const handleAddPedal = async newPedalData => {
+  const handleAddPedal = async (newPedalData, photo) => {
     const newPedal = await pedalService.create(newPedalData)
     setPedals([...pedals, newPedal])
     navigate('/')

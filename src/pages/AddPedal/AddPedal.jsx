@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react"
 function AddPedal(props) {
 	const formElement = useRef()
 	const [validForm, setValidForm] = useState(false)
+	const [photoData, setPhotoData] = useState({})
   const [formData, setFormData] = useState({
     name: "",
 		type: "",
@@ -17,8 +18,12 @@ function AddPedal(props) {
 
   const handleSubmit = evt => {
 		evt.preventDefault()
-    props.handleAddPedal(formData)
+    props.handleAddPedal(formData, photoData.photo)
 	}
+
+	const handleChangePhoto = evt => {
+    setPhotoData({ photo: evt.target.files[0] })
+  }
 
 	return (
 		<>
@@ -63,6 +68,18 @@ function AddPedal(props) {
 						name="description"
             value={formData.description}
             onChange={handleChange}
+					/>
+				</div>
+				<div className="form-group mb-4">
+					<label htmlFor="photo-upload" className="form-label">
+						Upload Photo
+					</label>
+					<input
+						type="file"
+						className="form-control"
+						id="photo-upload"
+						name="photo"
+						onChange={handleChangePhoto}
 					/>
 				</div>
 				<div className="d-grid">
