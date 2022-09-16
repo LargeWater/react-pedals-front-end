@@ -19,8 +19,17 @@ const App = () => {
 
   const [pedals, setPedals] = useState([])
 
+  const pedalPhotoHelper = async (photo, id) => {
+    const photoData = new FormData()
+    photoData.append('photo', photo)
+    return await pedalService.addPhoto(photoData, id)
+  }
+
   const handleAddPedal = async (newPedalData, photo) => {
     const newPedal = await pedalService.create(newPedalData)
+    if (photo) {
+      newPedal.photo = await pedalPhotoHelper(photo, newPedal._id)
+    }
     setPedals([...pedals, newPedal])
     navigate('/')
   }
@@ -40,8 +49,11 @@ const App = () => {
     setPedals(pedals.filter(pedal => pedal._id !== deletedPedal._id))
   }
 
-  const handleUpdatePedal = async updatedPedalData => {
+  const handleUpdatePedal = async (updatedPedalData, photo) => {
     const updatedPedal = await pedalService.update(updatedPedalData)
+    if (photo) {
+      updatedPedal.photo = await pedalPhotoHelper(photo, updatedPedal._id)
+    }
     const newPedalsArray = pedals.map(pedal => 
       pedal._id === updatedPedal._id ? updatedPedal : pedal 
     )

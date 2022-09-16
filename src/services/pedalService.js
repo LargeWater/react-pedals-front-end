@@ -40,10 +40,21 @@ async function update(pedal) {
   return res.json()
 }
 
+async function addPhoto(photoData, pedalId) {
+  const res = await fetch(`${BASE_URL}/${pedalId}/add-photo`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    },
+    body: photoData
+  })
+	return await res.json()
+}
 
 export {
 	create,
   getAll,
   deleteOne,
-  update
+  update,
+  addPhoto
 }
