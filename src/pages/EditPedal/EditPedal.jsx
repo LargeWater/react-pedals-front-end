@@ -32,18 +32,18 @@ function EditPedal(props){
       <h1>Edit Pedal</h1>
       <form autoComplete="off" ref={formElement} onSubmit={handleSubmit}> 
         <div className="form-group mb-3">
-        <div className="form-group mb-4">
-					<label htmlFor="photo-upload" className="form-label">
-						{formData.photo ? "Replace existing photo" : "Add Photo"}
-					</label>
-					<input
-						type="file"
-						className="form-control"
-						id="photo-upload"
-						name="photo"
-						onChange={handleChangePhoto}
-					/>
-				</div>
+          <div className="form-group mb-4">
+            <label htmlFor="photo-upload" className="form-label">
+              {formData.photo ? "Replace existing photo" : "Add Photo"}
+            </label>
+            <input
+              type="file"
+              className="form-control"
+              id="photo-upload"
+              name="photo"
+              onChange={handleChangePhoto}
+            />
+          </div>
           <label htmlFor="name-input" className="form-label">
             Pedal's Name (required)
           </label>

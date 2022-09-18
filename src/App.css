@@ -5,13 +5,13 @@
 }
 
 .App-header {
-  background-color: var(--black);
+  background-color: var(--background);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2vmin;
   font-size: 2.5vmin;
-  color: var(--background);
+  color: var(--black);
 }
 
 .App main {
@@ -25,4 +25,8 @@
 .App main h1 {
   color: var(--secondary-dark);
   margin-bottom: 5vmin;
+}
+
+header {
+  border-bottom: 1px solid var(--black);
 }

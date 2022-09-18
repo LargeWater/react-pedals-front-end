@@ -16,14 +16,14 @@ function AddPedal(props) {
 		formElement.current.checkValidity() ? setValidForm(true) : setValidForm(false)
 	}, [formData])
 
-  const handleSubmit = evt => {
-		evt.preventDefault()
-    props.handleAddPedal(formData, photoData.photo)
-	}
-
 	const handleChangePhoto = evt => {
-    setPhotoData({ photo: evt.target.files[0] })
+		setPhotoData({ photo: evt.target.files[0] })
   }
+
+	const handleSubmit = evt => {
+		evt.preventDefault()
+		props.handleAddPedal(formData, photoData.photo)
+	}
 
 	return (
 		<>
