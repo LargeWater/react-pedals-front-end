@@ -21,15 +21,18 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .App main h1 {
   color: var(--secondary);
   margin-bottom: 5vmin;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 header {
   border-bottom: 1px solid var(--white);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .form-label{
