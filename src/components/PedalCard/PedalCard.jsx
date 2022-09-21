@@ -8,7 +8,7 @@ function PedalCard({pedal, handleDeletePedal, user}) {
         src={pedal.photo}
         alt="pedal"
         className="card-img-top"
-        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px"}}
+        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px", borderBottom: "1px solid #a6acb196", padding: '20px'}}
       />
       <div className="card-body">
         <h2 className="card-text">{pedal.name}</h2>
