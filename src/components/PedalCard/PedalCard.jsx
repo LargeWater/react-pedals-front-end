@@ -8,23 +8,26 @@ function PedalCard({pedal, handleDeletePedal, user}) {
         src={pedal.photo}
         alt="pedal"
         className="card-img-top"
-        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px"}}
+        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px", backgroundColor: "#F7F0F5", mixBlendMode: "multiply"}}
       />
-      <div className="card-body">
-        <h2 className="card-text">{pedal.name} - {pedal.type}</h2>
+      <div className="card-body" style={{backgroundColor: "#F7F0F5", mixBlendMode: "multiply"}}>
+        <h2 className="card-text">{pedal.name}</h2>
+        <h5 className="card-text">{pedal.type}</h5>
         <p className="card-text">{pedal.description}</p>
       </div>
       {user?.profile === pedal.owner._id &&
-        <div className="card-footer">
+        <div className="card-footer" style={{backgroundColor: "#F7F0F5"}}>
           <Link
-            className='btn btn-sm btn-warning'
+            className='btn btn-sm'
+            style={{backgroundColor:"#8D6A9F", color: "#f7f0f5"}}
             to='/edit'
             state={{pedal}}
           >
             Edit
           </Link>
           <button 
-            className="btn btn-sm btn-danger m-left"
+            className="btn btn-sm m-left"
+            style={{backgroundColor:"#8D6A9F", color: "#f7f0f5"}}
             onClick={() => handleDeletePedal(pedal._id)}
           >
             Delete
