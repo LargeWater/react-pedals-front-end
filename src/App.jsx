@@ -19,12 +19,6 @@ const App = () => {
 
   const [pedals, setPedals] = useState([])
 
-  const pedalPhotoHelper = async (photo, id) => {
-    const photoData = new FormData()
-    photoData.append('photo', photo)
-    return await pedalService.addPhoto(photoData, id)
-  }
-
   const handleAddPedal = async (newPedalData, photo) => {
     const newPedal = await pedalService.create(newPedalData)
     if (photo) {
@@ -32,6 +26,12 @@ const App = () => {
     }
     setPedals([...pedals, newPedal])
     navigate('/')
+  }
+  
+  const pedalPhotoHelper = async (photo, id) => {
+    const photoData = new FormData()
+    photoData.append('photo', photo)
+    return await pedalService.addPhoto(photoData, id)
   }
 
   const handleLogout = () => {

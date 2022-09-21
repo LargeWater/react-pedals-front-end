@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
+// import styles from './PedalCard.module.css'
 
 function PedalCard({pedal, handleDeletePedal, user}) {
   return(
-    <div className="card">
+    <div className="card" style={{width: "640px"}}>
       <img
         src={pedal.photo}
         alt="pedal"
         className="card-img-top"
-        style={{width: "640px"}}
+        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px"}}
       />
       <div className="card-body">
         <h2 className="card-text">{pedal.name} - {pedal.type}</h2>
