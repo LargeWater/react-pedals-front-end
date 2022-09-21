@@ -5,7 +5,8 @@
 }
 
 .App-header {
-  background-color: var(--background);
+  background-color: #323232;
+  background-image: url('../public/pedalheader.png');
   display: flex;
   align-items: center;
   justify-content: space-between;
