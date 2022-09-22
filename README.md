@@ -1,6 +1,10 @@
 # React Pedals
 ## A MERN stack app for guitarists to share their pedals and pedalboard/s
 
+## [Live demo](https://react-pedals.netlify.app/)
+
+![screenshot](public/s.png)
+
 ## technologies used
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
