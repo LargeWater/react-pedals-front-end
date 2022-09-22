@@ -38,3 +38,6 @@ header {
 .form-label{
   color: var(--white);
 }
+label{
+  color: var(--white);
+}
