@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+import { Link } from 'react-router-dom';
 import styles from './Profiles.module.css';
 
 const Profiles = () => {
@@ -19,7 +20,16 @@ const Profiles = () => {
       {profiles.length ? 
         <>
           {profiles.map(profile =>
-            <p key={profile._id} className={styles.prof}>{profile.name}</p>
+            <Link to={`/${profile._id}`} className={styles.text} key={profile._id} state={{profile: profile}}>
+            <div className={styles.card}>
+              <img src={profile.photo} alt="" />
+              <div className={styles.cardBody}>
+                <h3 className={styles.cardTitle}>
+                  {profile.name}
+                </h3>
+              </div>
+            </div>
+          </Link>
           )}
         </>
       :
