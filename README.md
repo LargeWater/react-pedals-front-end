@@ -18,9 +18,11 @@
 
 ## next steps
 
-- [ ] add a user profile page which will display the user's pedals and pedalboard/s
+- [x] add a user profile page 
+- [x] which will display the user's pedals 
+- [ ] create pedalboard model and display pedalboards
 - [ ] create a visual representation of the pedalboard
-- [ ] comments
-- [ ] likes
+- [ ] comments?
+- [ ] likes?
 - [ ] search
 - [ ] experiment with Tailwind CSS or another CSS framework
