@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import PedalCard from '../../components/PedalCard/PedalCard';
 import styles from './ProfilePage.module.css';
@@ -15,6 +15,7 @@ function ProfilePage(props) {
   return (
     <div>
       <h1>{profile.name}'s Pedals</h1>
+      <div className={styles.container}>
       {profilePedals.length ?
       profilePedals.map(pedal => (
         <PedalCard 
@@ -25,7 +26,8 @@ function ProfilePage(props) {
       ))
       :
       <p className={styles.p}>No pedals yet!</p>
-      } 
+      }
+      </div>
     </div>
   );
 }
