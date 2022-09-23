@@ -13,6 +13,7 @@ function PedalCard({pedal, handleDeletePedal, user}) {
       <div className="card-body">
         <h2 className="card-text">{pedal.name}</h2>
         <h5 className="card-text">{pedal.type}</h5>
+        <h6 className="card-text">Added by {pedal.owner.name}</h6>
         <p className="card-text">{pedal.description}</p>
       </div>
       {user?.profile === pedal.owner._id &&
