@@ -12,6 +12,7 @@ import * as pedalService from './services/pedalService'
 import PedalList from './pages/PedalList/PedalList'
 import EditPedal from './pages/EditPedal/EditPedal'
 import './App.css'
+import ProfilePage from './pages/ProfilePage/ProfilePage'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -110,6 +111,7 @@ const App = () => {
               path="/edit"
               element={<EditPedal handleUpdatePedal={handleUpdatePedal}/>}
             />
+            <Route path='/:id' element={<ProfilePage />} />
           </Routes>
         </main>
       </div>

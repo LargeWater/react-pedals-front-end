@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
-      <header className="App-header">
+      <header className="App-header" style={{overflow: 'hidden'}}>
         React Pedals
         {user ?
           <nav>
