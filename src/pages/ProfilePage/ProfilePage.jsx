@@ -13,7 +13,7 @@ function ProfilePage(props) {
   const profilePedals = props.pedals.filter(pedal => pedal.owner._id === profile._id)
 
   return (
-    <div>
+    <div className={styles.prof}>
       <h1>{profile.name}'s Pedals</h1>
       <div className={styles.container}>
       {profilePedals.length ?
