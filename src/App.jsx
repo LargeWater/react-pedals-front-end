@@ -13,9 +13,20 @@ import PedalList from './pages/PedalList/PedalList'
 import EditPedal from './pages/EditPedal/EditPedal'
 import './App.css'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
+import * as profileService from './services/profileService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [profiles, setProfiles] = useState([])
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      const profileData = await profileService.getAllProfiles()
+      setProfiles(profileData)
+    }
+    fetchProfiles()
+  }, [])
+
+
   const navigate = useNavigate()
 
   const [pedals, setPedals] = useState([])
@@ -111,7 +122,7 @@ const App = () => {
               path="/edit"
               element={<EditPedal handleUpdatePedal={handleUpdatePedal}/>}
             />
-            <Route path='/:id' element={<ProfilePage />} />
+            <Route path='/:profileId' element={<ProfilePage profiles={profiles} pedals={pedals} user={user}/>} />
           </Routes>
         </main>
       </div>
