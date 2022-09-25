@@ -120,9 +120,25 @@ const App = () => {
             />
             <Route
               path="/edit"
-              element={<EditPedal handleUpdatePedal={handleUpdatePedal}/>}
+              element={
+                <EditPedal 
+                  handleUpdatePedal={handleUpdatePedal}
+                />
+              }
             />
-            <Route path='/:profileId' element={<ProfilePage profiles={profiles} pedals={pedals} user={user}/>} />
+            <Route 
+              path='/:profileId' 
+              element={
+                <ProfilePage 
+                  profiles={profiles} 
+                  pedals={pedals} 
+                  user={user}
+                />
+              } 
+            />
+            <Route
+              path='/pedalboards'
+            />
           </Routes>
         </main>
       </div>
