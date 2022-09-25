@@ -16,23 +16,33 @@ code {
   --background: #212121;
   --secondary: #A9FBD7;
   --secondary-dark: #716A5C;
+  --d-100: #F2F3F2;
+  --d-200: #E4E7E4;
+  --d-300: #C6CEC7;
+  --d-400: #A3B0A5;
+  --d-500: #768D78;
+  --d-600: #235D2D;
+  --d-700: #1F5328;
+  --d-800: #1B4822;
+  --d-900: #223423;
+  --d-1000: #081808;
 }
 
 a {
-  color: var(--white);
+  color: var(--d-100);
   padding: 1vmin;
   border-radius: 1vmin;
   text-decoration: none !important;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--d-500);
   /* background-color: var(--accent); */
 }
 
 a.active {
-  color: var(--background);
-  background-color: var(--white);
+  color: var(--d-900);
+  background-color: var(--d-100);
   cursor: default;
 }
 

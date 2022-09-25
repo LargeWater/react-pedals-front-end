@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding: 2vmin;
   font-size: 2.5vmin;
-  color: var(--white);
+  color: var(--d-100);
 }
 
 @keyframes slide {
@@ -23,7 +23,7 @@
   }
 }
 .App main {
-  background-color: var(--background);
+  background-color: var(--d-1000);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -32,22 +32,22 @@
 }
 
 .App main h1 {
-  color: var(--secondary);
+  color: var(--d-300);
   margin-bottom: 5vmin;
   font-family: 'Ubuntu', sans-serif;
 }
 
 header {
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--d-100);
   font-family: 'Ubuntu', sans-serif;
-  background-color: #323232;
+  background-color: var(--d-900);
   background-image: url('../public/navbg.png');
 }
 
 
 .form-label{
-  color: var(--white);
+  color: var(--d-100);
 }
 label{
-  color: var(--white);
+  color: var(--d-100);
 }
