@@ -87,8 +87,8 @@ const App = () => {
     <>
       <div className="App">
         <NavBar user={user} handleLogout={handleLogout} />
-        <main>
         <ScrollingBackground />
+        <main>
           <Routes>
             <Route
               path="/signup"
