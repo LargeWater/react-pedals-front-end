@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 
 function PedalCard({pedal, handleDeletePedal, user}) {
   return(
-    <div className="card" style={{width: "640px"}}>
+    <div className="card" style={{width: "444px"}}>
       <img
         src={pedal.photo}
         alt="pedal"
         className="card-img-top"
-        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "400px", borderBottom: "1px solid #a6acb196", padding: '20px'}}
+        style={{width: "auto", height: "auto", objectFit: "contain", maxHeight: "300px", borderBottom: "1px solid #a6acb196", padding: '20px'}}
       />
       <div className="card-body">
         <h2 className="card-text">{pedal.name}</h2>
