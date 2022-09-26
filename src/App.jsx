@@ -140,6 +140,9 @@ const App = () => {
             />
             <Route
               path='/pedalboards'
+              element={
+                <h1 style={{marginBottom: 'auto'}}>Coming Soon!</h1>
+              }
             />
           </Routes>
         </main>
