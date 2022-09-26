@@ -108,7 +108,7 @@ const App = () => {
             />
             <Route 
               path="/add"
-              element={<AddPedal handleAddPedal={handleAddPedal}/>}
+              element={user ? <AddPedal handleAddPedal={handleAddPedal}/> : <Navigate to="/login" />}
             />
             <Route
               path="/"
