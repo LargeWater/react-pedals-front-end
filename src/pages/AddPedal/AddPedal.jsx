@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import styles from './AddPedal.module.css'
 
 function AddPedal(props) {
 	const formElement = useRef()
@@ -28,7 +29,7 @@ function AddPedal(props) {
 	return (
 		<>
 			<h1>Add Pedal</h1>
-			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit}>
+			<form autoComplete="off" ref={formElement} onSubmit={handleSubmit} className={styles.form}>
 				<div className="form-group mb-3">
 					<label htmlFor="name-input" className="form-label">
 						Pedal's Name (required)
