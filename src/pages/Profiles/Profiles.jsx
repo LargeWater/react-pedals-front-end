@@ -18,7 +18,7 @@ const Profiles = () => {
     <>
       <h1>all profiles</h1>
       {profiles.length ? 
-        <>
+        <div className={styles.container}>
           {profiles.map(profile =>
             <Link to={`/${profile._id}`} className={styles.text} key={profile._id} state={{profile: profile}}>
             <div className={styles.card}>
@@ -31,7 +31,7 @@ const Profiles = () => {
             </div>
           </Link>
           )}
-        </>
+        </div>
       :
         <p>No profiles yet</p>
       }

@@ -14,14 +14,6 @@
   color: var(--d-100);
 }
 
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, 0, 0); 
-  }
-}
 .App main {
   background-color: var(--d-1000);
   display: flex;
@@ -29,6 +21,7 @@
   justify-content: center;
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
+  overflow: hidden;
 }
 
 .App main h1 {
@@ -41,7 +34,7 @@ header {
   border-bottom: 1px solid var(--d-100);
   font-family: 'Ubuntu', sans-serif;
   background-color: var(--d-900);
-  background-image: url('../public/navbg.png');
+  /* background-image: url('../public/navbg.png'); */
 }
 
 

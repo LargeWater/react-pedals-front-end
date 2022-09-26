@@ -1,11 +1,12 @@
 .main {
-  block-size: 100%;
-  inline-size: 100%;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 20px;
   margin: 20px;

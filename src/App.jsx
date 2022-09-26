@@ -14,6 +14,7 @@ import EditPedal from './pages/EditPedal/EditPedal'
 import './App.css'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import * as profileService from './services/profileService'
+import ScrollingBackground from './components/ScrollingBackground/ScrollingBackground'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -87,6 +88,7 @@ const App = () => {
       <div className="App">
         <NavBar user={user} handleLogout={handleLogout} />
         <main>
+        <ScrollingBackground />
           <Routes>
             <Route
               path="/signup"
