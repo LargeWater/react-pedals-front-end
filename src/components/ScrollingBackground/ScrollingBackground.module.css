@@ -1,8 +1,10 @@
 .containter {
   overflow: hidden;
   background-color: var(--d-1000);
-  padding-top: 15px;
-  padding-bottom: 0%;
+  padding-top: 0px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid var(--d-100);
+  border-top: 1px solid var(--d-100);
 }
 
 .slidingBackground {
