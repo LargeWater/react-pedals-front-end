@@ -38,7 +38,7 @@ const Navv = ({ user, handleLogout }) => {
     <>
       <Navbar collapseOnSelect expand="lg" variant='dark'>
         <Container>
-          <Navbar.Brand href="#home">React Pedals</Navbar.Brand>
+          <Navbar.Brand>React Pedals</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {user ?
