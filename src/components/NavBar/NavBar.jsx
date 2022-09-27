@@ -33,7 +33,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const BasicExample = ({ user, handleLogout }) => {
+const Navv = ({ user, handleLogout }) => {
   return (
     <>
       <Navbar collapseOnSelect expand="lg" variant='dark'>
@@ -64,4 +64,4 @@ const BasicExample = ({ user, handleLogout }) => {
   );
 }
 
-export default BasicExample;
+export default Navv;

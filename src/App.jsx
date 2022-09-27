@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import NavBar from './components/NavBar/NavBar'
+import Navv from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Profiles from './pages/Profiles/Profiles'
@@ -84,7 +84,7 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <NavBar user={user} handleLogout={handleLogout} />
+        <Navv user={user} handleLogout={handleLogout} />
         <ScrollingBackground />
         <main>
           <Routes>
