@@ -5,7 +5,6 @@
 }
 
 .App-header {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,7 +20,6 @@
   justify-content: center;
   align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
-  overflow: hidden;
 }
 
 .App main h1 {
@@ -38,9 +36,20 @@ header {
 }
 
 
+
+
+
 .form-label{
   color: var(--d-100);
 }
 label{
   color: var(--d-100);
+}
+
+@media (max-width: 768px) {
+  .App-header{
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 }

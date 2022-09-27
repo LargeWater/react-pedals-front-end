@@ -26,3 +26,4 @@ const NavBar = ({ user, handleLogout }) => {
 }
 
 export default NavBar
+
