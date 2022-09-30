@@ -14,6 +14,8 @@ import './App.css'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import * as profileService from './services/profileService'
 import ScrollingBackground from './components/ScrollingBackground/ScrollingBackground'
+import PedalBoardList from './pages/PedalboardList/PedalboardList'
+import * as pedalboardService from './services/pedalboardService'
 
 
 const App = () => {
@@ -39,6 +41,12 @@ const App = () => {
     setPedals([...pedals, newPedal])
     navigate('/')
   }
+
+  // const handleAddPedalboard = async (newPedalboardData) => {
+  //   const newPedalboard = await pedalboardService.create(newPedalboardData)
+  //   setPedalboards([...pedalboards, newPedalboard])
+  //   navigate('/')
+  // }
   
   const pedalPhotoHelper = async (photo, id) => {
     const photoData = new FormData()
@@ -80,6 +88,17 @@ const App = () => {
       setPedals(pedalData)
     }
     fetchAllPedals()
+  }, [])
+
+  const [pedalboards, setPedalboards] = useState([])
+
+  useEffect(() => {
+    const fetchAllPedalboards = async () => {
+      const pedalboardData = await pedalboardService.getAll()
+      setPedalboards(pedalboardData)
+      console.log(pedalboardData)
+    }
+    fetchAllPedalboards()
   }, [])
 
 
@@ -141,7 +160,11 @@ const App = () => {
             <Route
               path='/pedalboards'
               element={
-                <h1 style={{marginBottom: 'auto'}}>Coming Soon!</h1>
+                <PedalBoardList
+                  pedalboards={pedalboards}
+                  pedals={pedals}
+                  user={user}
+                />
               }
             />
           </Routes>
