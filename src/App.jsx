@@ -15,6 +15,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage'
 import * as profileService from './services/profileService'
 import ScrollingBackground from './components/ScrollingBackground/ScrollingBackground'
 
+
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const [profiles, setProfiles] = useState([])
@@ -59,6 +60,7 @@ const App = () => {
     const deletedPedal = await pedalService.deleteOne(id)
     setPedals(pedals.filter(pedal => pedal._id !== deletedPedal._id))
   }
+
 
   const handleUpdatePedal = async (updatedPedalData, photo) => {
     const updatedPedal = await pedalService.update(updatedPedalData)
