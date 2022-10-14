@@ -11,11 +11,7 @@ function PedalBoardList(props){
     <div>
       <h1>Pedal Board List</h1>
       <div>
-        {/* {pedalboards.map(pedalboard => 
-        <PedalBoard 
-          key={pedalboard._id}
-        />
-        )} */}
+        Coming Soon!
       </div>
     </div>
   )
