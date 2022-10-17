@@ -1,0 +1,14 @@
+.searchBar{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
