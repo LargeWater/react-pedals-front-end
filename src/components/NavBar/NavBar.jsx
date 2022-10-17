@@ -16,6 +16,7 @@ const Navv = ({ user, handleLogout }) => {
             {user ?
             <Nav className="me-auto">
               <Link to="/">Pedals</Link>
+              <Link to='/search'>Search</Link>
               <Link to="/profiles">Profiles</Link>
               <Link to="/pedalboards">Pedalboards</Link>
               <NavDropdown title="Account" id="basic-nav-dropdown" variant='info' className={styles.dropdown}>

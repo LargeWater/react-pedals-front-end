@@ -2,6 +2,7 @@ import styles from './PedalList.module.css';
 import PedalCard from '../../components/PedalCard/PedalCard';
 import { Link } from 'react-router-dom';
 
+
 function PedalList(props) {
   return (
     <>

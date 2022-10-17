@@ -10,7 +10,7 @@ function PedalBoardList(props){
   return (
     <div>
       <h1>Pedal Board List</h1>
-      <div>
+      <div style={{color: "var(--d-100)"}}>
         Coming Soon!
       </div>
     </div>

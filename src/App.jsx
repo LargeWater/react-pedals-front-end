@@ -16,6 +16,7 @@ import * as profileService from './services/profileService'
 import ScrollingBackground from './components/ScrollingBackground/ScrollingBackground'
 import PedalBoardList from './pages/PedalboardList/PedalboardList'
 import * as pedalboardService from './services/pedalboardService'
+import Search from './components/Search/Search'
 
 
 const App = () => {
@@ -164,6 +165,14 @@ const App = () => {
                   pedalboards={pedalboards}
                   pedals={pedals}
                   user={user}
+                />
+              }
+            />
+            <Route
+              path='/search'
+              element={
+                <Search
+                  pedals={pedals}
                 />
               }
             />
