@@ -24,5 +24,5 @@
 - [ ] create a visual representation of the pedalboard
 - [ ] comments?
 - [ ] likes?
-- [ ] search
+- [x] search
 - [ ] experiment with Tailwind CSS or another CSS framework
