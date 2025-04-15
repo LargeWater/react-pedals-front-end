@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "jwt-decode": "^3.1.2",
-    "mongoose": "^6.6.1",
+    "mongoose": "^6.13.6",
     "nth-check": "^2.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
